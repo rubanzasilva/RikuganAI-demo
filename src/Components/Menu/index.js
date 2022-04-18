@@ -108,7 +108,7 @@ class HomeMenu extends React.Component {
               <UploadData>
 
               <Upload {...props}>
-              <Button icon={<UploadOutlined />}> UploadData</Button>
+              <Button icon={<UploadOutlined />}> UploadDataset</Button>
               </Upload>
 
               </UploadData>
