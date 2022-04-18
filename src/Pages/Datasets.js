@@ -8,12 +8,8 @@ const Datasets = () => {
     <div>
         <Navbar/>
         <HomeMenu/>
-        <p>trial</p>
-        <p>trial</p>
-        <p>trial</p>
-        <p>trial</p>
-        <p>trial</p>
-        <p>trial</p>
+        <p>trial</p> 
+        <p></p>
     </div>
   )
 }

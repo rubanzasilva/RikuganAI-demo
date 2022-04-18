@@ -34,6 +34,9 @@ const props = {
   },
 };
 
+
+
+
 class HomeMenu extends React.Component {
   state = {
     collapsed: false,
@@ -44,7 +47,8 @@ class HomeMenu extends React.Component {
     this.setState({ collapsed });
   };
 
-  render() {
+
+  render() { 
     const { collapsed } = this.state;
     return (
       <Layout style={{ minHeight: '100vh' }}>
@@ -52,7 +56,7 @@ class HomeMenu extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<HomeOutlined />}>
-              Home
+            <NavLink to="/">Home</NavLink>
             </Menu.Item>
             <Menu.Item key="2" icon={<DatabaseOutlined /> }>
             <NavLink to="/Datasets">Datasets</NavLink>
@@ -108,7 +112,7 @@ class HomeMenu extends React.Component {
               <UploadData>
 
               <Upload {...props}>
-              <Button icon={<UploadOutlined />}> UploadDataset</Button>
+              <Button icon={<UploadOutlined />}> </Button>
               </Upload>
 
               </UploadData>
@@ -129,3 +133,7 @@ class HomeMenu extends React.Component {
 }
 
 export default HomeMenu;
+
+
+
+
