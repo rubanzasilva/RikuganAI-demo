@@ -2,22 +2,34 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 
 
-export const MenuContainer = styled.div`
-    height:100px;
-   
-    .ant-menu-item a {
-    color: #fff;
-    
-}
-
-.ant-menu-dark.ant-menu-inline, .ant-menu-dark.ant-menu-vertical, .ant-menu-dark.ant-menu-vertical-left, .ant-menu-dark.ant-menu-vertical-right {
-    ${'' /* border-right: 0; */}
-    height: 100%;
-    justify-content: center;
-    align-content: center;
-    padding-top:16px;
-}
-`;
+// export const MenuContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #F7F2EF;
+//     padding: 16px;
+//     margin: 0;
+//     border-radius: 0;
+//     box-shadow: 0 0 0 0;
+//     border: 0;
+//     font-family: "Roboto", sans-serif;
+//     font-size: 16px;
+//     font-weight: 400;
+//     line-height: 1.5;
+//     color: #3C3C3C;
+//     text-align: center;
+//     transition: all 0.3s ease-in-out;
+//     cursor: pointer;
+//     &:hover {
+//         background-color: #F7F2EF;
+//         box-shadow: 0 0 0 0;
+//         border: 0;
+//         color: #3C3C3C;
+//     }
+// `;
 
 export const NavLink = styled(Link)`
  color:#fff;
@@ -31,7 +43,7 @@ export const NavLink = styled(Link)`
  font-size:14px;
 
  &:visited {
-    color:#fff;
+    color:blurywood;
 }
 
 ${'' /* &:hover {
