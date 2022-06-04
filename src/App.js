@@ -11,7 +11,7 @@ import Recommender from './Pages/recommender';
 import Admin from './Pages/Admin';
 import DataSources from './Pages/dataSources';
 // import Navbar from './Components/Navbar';
-import NavBar from './Components/Navbar/indexA';
+import NavBar from './Components/Navbar/indexA'
 
 
 function App() {
