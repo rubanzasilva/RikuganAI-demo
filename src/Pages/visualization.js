@@ -1,5 +1,11 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import { FaBars } from 'react-icons/fa'
+import { SidebarData } from '../Components/SideBar/sideBarData'
+
+import { IconContext } from 'react-icons'
+import * as AiIcons from 'react-icons/ai';
+
 // import './index.css';
 import { Layout, Menu, Breadcrumb ,Upload, Button} from 'antd';
 import {
@@ -86,63 +92,61 @@ class Visualization extends React.Component {
       <Navbar/>
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}  >
-          <div className="logo" />
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1" icon={<HomeOutlined />}>
-            <CustomLink to="/">Home</CustomLink>
-            </Menu.Item>
-            <Menu.Item key="2" icon={<DatabaseOutlined /> }>
-            <CustomLink to="/DataSources"> Datasources</CustomLink>
+
+        <nav >
+      <ul className='nav-menu-items' >
+        {SidebarData.map((item, index) => {
+          return (
+            
+            
+
+
+            <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+              
+            <li key={index} className={item.cName}>
+              {/* <Link to={item.path}>
+                {item.icon}
+                <span>{item.title}</span>
+              </Link> */}
+
+             
+              <Menu.Item key="1" icon={item.icon}>
+            <CustomLink to={item.path}><span>{item.title}</span></CustomLink>
             </Menu.Item>
 
-            <SubMenu key="sub1" icon={<UserOutlined />} title="Data Management">
+            {/* <SubMenu key="sub1" icon={<UserOutlined />} title="Data Management">
             <Menu.Item key="3">
                 <CustomLink to="/Visualization"> Datasets </CustomLink>
               </Menu.Item>
-              <Menu.Item key="4">
-                <CustomLink to="/Visualization"> Transform </CustomLink>
-              </Menu.Item>
-              <Menu.Item key="5">
-                <CustomLink to="/Visualization"> Versioning </CustomLink>
-              </Menu.Item>
-            </SubMenu>
-
-            <Menu.Item key="6" icon={<DatabaseOutlined /> }>
-            <CustomLink to="/Visualization"> Visualization </CustomLink>
-            </Menu.Item>
-
-            <SubMenu key="sub2" icon={<UserOutlined />} title="Use Cases">
-              <Menu.Item key="7">
-                <CustomLink to="/DemandForecasting"> Demand Forecasting </CustomLink>
-              </Menu.Item>
-              <Menu.Item key="8">
-                <CustomLink to="/FraudDetection"> Fraud Detection </CustomLink>
-              </Menu.Item>
-              <Menu.Item key="9">
-                <CustomLink to="/Recommender"> Recommender </CustomLink>
-              </Menu.Item>
-            </SubMenu>
-
+            </SubMenu> */}
             
-            <Menu.Item key="10" icon={<FileOutlined />}>
-            <CustomLink to="/Admin"> Admin </CustomLink>
-            </Menu.Item>
 
-          </Menu>
+           
+
+              
+            </li>
+            
+
+              </Menu>
+          )
+        })}
+      </ul>
+    </nav>
+
+          <div className="logo" />
+         
           <hr />
 
 <Outlet />
         </Sider>
 
-        <Layout className="site-layout">
+        {/* <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content style={{ margin: '0 16px' }}>
-            
-          <p>Visualization</p>
            
           </Content>
           <Footer style={{ textAlign: 'center' }}>RIKUGAN AI ©2022 Powered by Rikugan AI Technology Corp.</Footer>
-        </Layout>
+        </Layout> */}
       </Layout>
       </MenuContainer>
     );
