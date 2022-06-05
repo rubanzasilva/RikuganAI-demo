@@ -16,20 +16,20 @@ export const SidebarData = [
         cName:'nav-text'
     },
     {
+        title:'Data Management',
+        path:'/DataManagement',
+        icon: <FaBars/>,
+        cName:'nav-text'
+    },
+    {
         title:'Visualization',
         path:'/Visualization',
         icon: <FaBars/>,
         cName:'nav-text'
     },
     {
-        title:'Data Management',
-        path:'/',
-        icon: <FaBars/>,
-        cName:'nav-text'
-    },
-    {
         title:'Use Cases',
-        path:'/',
+        path:'/UseCases',
         icon: <FaBars/>,
         cName:'nav-text'
     },
