@@ -1,4 +1,5 @@
 import React from 'react'
+import DataMgt from '../Components/dataMgt'
 
 const DataManagement = () => {
   return (
@@ -7,33 +8,13 @@ const DataManagement = () => {
       This is the home page
 
     </p>
-
-    <p>
-      This is the home page
-
-    </p>
-
-    <p>
-      This is the home page
-
-    </p>
-
-    <p>
-      This is the home page
-
-    </p>
     
     <br/>
+    <DataMgt/>
     <p>
       This is the home page
 
     </p>
-
-    <p>
-      This is the home page
-
-    </p>
-    
     
     </div>
   )

@@ -1,0 +1,15 @@
+{
+  "resourceName": "s3rikuganaidemostoragea1",
+  "bucketName": "rikuganai-demo-storage-a1",
+  "policyUUID": "ca8b4543",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ",
+    "CREATE_AND_UPDATE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
