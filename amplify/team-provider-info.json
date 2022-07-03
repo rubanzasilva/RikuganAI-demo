@@ -10,6 +10,11 @@
       "StackName": "amplify-rikuganaidemo-main-183759",
       "StackId": "arn:aws:cloudformation:us-east-1:535449601311:stack/amplify-rikuganaidemo-main-183759/c47f0860-f8a3-11ec-8463-0a6328e8b1f1",
       "AmplifyAppId": "dngj0plc0836o"
+    },
+    "categories": {
+      "auth": {
+        "rikuganaidemo6c0a4207": {}
+      }
     }
   }
 }
