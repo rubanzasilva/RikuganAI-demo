@@ -24,5 +24,12 @@
         ]
       }
     }
+  },
+  "storage": {
+    "s3rikuganaidatastorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
   }
 }
