@@ -1,6 +1,6 @@
 {
   "auth": {
-    "rikuganaidemo6c0a4207": {
+    "rikuganaidemo73200ecf": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -23,13 +23,6 @@
           "EMAIL"
         ]
       }
-    }
-  },
-  "storage": {
-    "s3rikuganaidatastorage": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": []
     }
   }
 }

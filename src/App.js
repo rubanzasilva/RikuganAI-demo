@@ -21,10 +21,12 @@ import {
   Card,
 } from "@aws-amplify/ui-react";
 
-import Amplify from "aws-amplify";
-import {AmplifyS3Album} from "@aws-amplify/ui-react/legacy";
-import awsconfig from "./aws-exports";
-Amplify.configure(awsconfig);
+
+
+// import Amplify from "aws-amplify";
+// import {AmplifyS3Album} from "@aws-amplify/ui-react/legacy";
+// import awsconfig from "./aws-exports";
+// Amplify.configure(awsconfig);
 
 
 function App({ signOut })  {
@@ -54,10 +56,10 @@ function App({ signOut })  {
      </Router>
 
      <View className="App">
-      <Card>
+      {/* <Card>
         <Image src={logo} className="App-logo" alt="logo" />
         <Heading level={1}>We now have Auth!</Heading>
-      </Card>
+      </Card> */}
       <Button onClick={signOut}>Sign Out</Button>
     </View>
     
