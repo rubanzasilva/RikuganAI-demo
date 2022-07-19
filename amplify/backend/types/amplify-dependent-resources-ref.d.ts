@@ -9,5 +9,18 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "api": {
+        "rikuganaidemo": {
+            "GraphQLAPIKeyOutput": "string",
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "storage": {
+        "s3rikuganaistorage": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }

@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3rikuganaistorage",
+  "bucketName": "rikuganai-storage",
+  "policyUUID": "2350b4c9",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
