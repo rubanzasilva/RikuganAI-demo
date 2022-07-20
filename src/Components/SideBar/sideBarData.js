@@ -39,6 +39,13 @@ export const SidebarData = [
         icon: <FaBars/>,
         cName:'nav-text'
     },
+    {
+        title:'HomePage',
+        path:'/HomePage',
+        icon: <FaBars/>,
+        cName:'nav-text'
+    }
+
 
 ]
 

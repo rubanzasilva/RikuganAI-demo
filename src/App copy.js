@@ -10,12 +10,23 @@ import DataSources from './Pages/dataSources';
 import NavBar from './Components/Navbar/indexA';
 import UseCases from './Pages/useCases';
 import DataManagement from './Pages/dataManagement';
-import HomePage from './Pages/homePage';
+
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  View,
+} from "@aws-amplify/ui-react";
+
+
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
 
 
 
-
-function App()  {
+function App({ signOut })  {
 
   return (
   
@@ -28,7 +39,6 @@ function App()  {
        <Routes>
           <Route path="/" element={<Home/>}/>
           <Route index element={<Home />} />
-          <Route path="/HomePage" element={<HomePage/>}/>
           <Route exact path='/DataSources' element={<DataSources/>}></Route>
           <Route exact path='/Visualization' element={< Visualization />}></Route>
           <Route exact path='/UseCases' element={< UseCases />}></Route>
@@ -40,11 +50,13 @@ function App()  {
        </Routes>
      </Router>
 
-  
+     <View className="App">
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>
     
    </div>
    
   );
 }
 
-export default App;
+export default withAuthenticator(App);

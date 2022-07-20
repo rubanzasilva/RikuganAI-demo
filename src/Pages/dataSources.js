@@ -1,8 +1,12 @@
 import React from 'react'
+import NavBar from '../Components/Navbar/indexA'
 
 const DataSources = () => {
   return (
-    <div>DataSources</div>
+    <div>
+    <NavBar/>
+    <h1>datasources</h1>
+    DataSources</div>
   )
 }
 
