@@ -10,9 +10,37 @@ import DataSources from './Pages/dataSources';
 import NavBar from './Components/Navbar/indexA';
 import UseCases from './Pages/useCases';
 import DataManagement from './Pages/dataManagement';
+import logo from "./logo.svg";
 
 
-function App()  {
+import { API, Storage } from 'aws-amplify';
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+
+
+import Amplify from "aws-amplify";
+import {AmplifyS3Album} from "@aws-amplify/ui-react/legacy";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
+
+
+
+
+// import Amplify from "aws-amplify";
+// import {AmplifyS3Album} from "@aws-amplify/ui-react/legacy";
+// import awsconfig from "./aws-exports";
+// Amplify.configure(awsconfig);
+
+
+function App({ signOut })  {
 
   return (
   
@@ -37,10 +65,20 @@ function App()  {
           {/* </Route> */}
        </Routes>
      </Router>
+
+     <View className="App">
+      {/* <Card>
+        <Image src={logo} className="App-logo" alt="logo" />
+        <Heading level={1}>We now have Auth!</Heading>
+      </Card> */}
+      <h1 style={{'text-align':'center'}}>My Gallery</h1>        
+    <AmplifyS3Album />
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>
     
    </div>
    
   );
 }
 
-export default App;
+export default withAuthenticator(App);

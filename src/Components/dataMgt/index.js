@@ -1,77 +1,84 @@
-import React from 'react'
+import React, { Component, useState } from 'react'
 import { Nav,  NavMenu, NavItem, NavLink, Container, Navlogo } from './dataManagementElements'
 import {  Avatar, Upload, Button,message } from 'antd';
 import {
   UploadOutlined ,MenuOutlined,InboxOutlined
 } from '@ant-design/icons';
 import { IoMdNotificationsOutline } from 'react-icons/io';
+import 'antd/dist/antd.css';
 
-const { Dragger } = Upload;
-const propsA = {
-  name: 'file',
-  multiple: true,
-  action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
 
-  onChange(info) {
-    const { status } = info.file;
+import { API, Storage } from 'aws-amplify';
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
 
-    if (status !== 'uploading') {
-      console.log(info.file, info.fileList);
-    }
 
-    if (status === 'done') {
-      message.success(`${info.file.name} file uploaded successfully.`);
-    } else if (status === 'error') {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  },
-
-  onDrop(e) {
-    console.log('Dropped files', e.dataTransfer.files);
-  },
-};
-
-const props = {
-  action: '//jsonplaceholder.typicode.com/posts/',
-  listType: 'picture',
-
-  previewFile(file) {
-    console.log('Your upload file:', file); // Your process logic. Here we just mock to the same file
-
-    return fetch('https://next.json-generator.com/api/json/get/4ytyBoLK8', {
-      method: 'POST',
-      body: file,
-    })
-      .then((res) => res.json())
-      .then(({ thumbnail }) => thumbnail);
-  },
-};
+import Amplify from "aws-amplify";
+//import useAmplifyAuth from './useAmplifyAuth';
 
 const DataMgt = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = async (e) => {
+      const fileContent = e.target.files[0]
+      /*const fileName = e.target.files[0].name*/
+      const fileType = e.target.files[0].type
+
+      
+      let ext = fileContent.name.split(".").pop().toLowerCase();
+      let fileFormats = ["csv"];
+      if (!fileFormats.includes(ext)) {
+          console.log("Invalid file format");
+          return false;
+      }
+      
+      let fileName =
+          "data/" +
+          fileContent.name.substr(0, fileContent.name.indexOf(ext) - 1) +
+          "." +
+          ext;
+      try {
+          setLoading(true);
+
+          // Upload the file to s3 with private access level.
+          await Storage.put(fileName, fileContent, {
+              contentType: fileType,
+              level: 'private',
+              progressCallback(progress) {
+                  console.log(`Uploaded: ${progress.loaded}/${progress.total}`);
+              },
+          })
+          
+          setLoading(false);
+      } catch (err) {
+          console.log(err);
+      }
+  }
+
+
+
   return (
     <Container>
     <div>
-    <Upload {...props}>
-        <Button icon={<UploadOutlined />}> Upload Dataset </Button>
-        </Upload>
-        </div>
-        <div>
-        <Dragger {...props}>
-    <p className="ant-upload-drag-icon">
-      <InboxOutlined />
-    </p>
-    <p className="ant-upload-text">Click or drag file to this area to upload</p>
-    <p className="ant-upload-hint">
-      Support for a single or bulk upload. Strictly prohibit from uploading company data or other
-      band files
-    </p>
-  </Dragger>
-        </div>
+    <h1> Upload CSV File to S3 </h1>
+                        {loading ? <h3>Uploading...</h3> : 
+                        <input
+                            type="file" accept="text/csv"
+                            placeholder="Enter a text"
+                            onChange={(evt) => handleChange(evt)}
+                        />}
+    </div>
     </Container>
        
 
   )
 }
 
-export default DataMgt
 
+export default withAuthenticator(DataMgt)

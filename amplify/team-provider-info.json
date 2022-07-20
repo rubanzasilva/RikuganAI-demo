@@ -1,0 +1,56 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifye1fc544c2e814-staging-61729-authRole",
+      "UnauthRoleArn": "arn:aws:iam::535449601311:role/amplify-amplifye1fc544c2e814-staging-61729-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::535449601311:role/amplify-amplifye1fc544c2e814-staging-61729-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifye1fc544c2e814-staging-61729-deployment",
+      "UnauthRoleName": "amplify-amplifye1fc544c2e814-staging-61729-unauthRole",
+      "StackName": "amplify-amplifye1fc544c2e814-staging-61729",
+      "StackId": "arn:aws:cloudformation:us-east-1:535449601311:stack/amplify-amplifye1fc544c2e814-staging-61729/fa07dae0-0017-11ed-8948-122de11786bd",
+      "AmplifyAppId": "dngj0plc0836o"
+    },
+    "categories": {
+      "auth": {
+        "rikuganaidemo73200ecf": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rikuganaidemo-dev-140801-authRole",
+      "UnauthRoleArn": "arn:aws:iam::535449601311:role/amplify-rikuganaidemo-dev-140801-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::535449601311:role/amplify-rikuganaidemo-dev-140801-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rikuganaidemo-dev-140801-deployment",
+      "UnauthRoleName": "amplify-rikuganaidemo-dev-140801-unauthRole",
+      "StackName": "amplify-rikuganaidemo-dev-140801",
+      "StackId": "arn:aws:cloudformation:us-east-1:535449601311:stack/amplify-rikuganaidemo-dev-140801/e7c1ddc0-e98f-11ec-a0c2-12d1515325c9",
+      "AmplifyAppId": "dngj0plc0836o"
+    },
+    "categories": {
+      "auth": {
+        "rikuganaidemo6c0a4207": {}
+      }
+    }
+  },
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rikuganaidemo-main-183759-authRole",
+      "UnauthRoleArn": "arn:aws:iam::535449601311:role/amplify-rikuganaidemo-main-183759-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::535449601311:role/amplify-rikuganaidemo-main-183759-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-rikuganaidemo-main-183759-deployment",
+      "UnauthRoleName": "amplify-rikuganaidemo-main-183759-unauthRole",
+      "StackName": "amplify-rikuganaidemo-main-183759",
+      "StackId": "arn:aws:cloudformation:us-east-1:535449601311:stack/amplify-rikuganaidemo-main-183759/c47f0860-f8a3-11ec-8463-0a6328e8b1f1",
+      "AmplifyAppId": "dngj0plc0836o"
+    },
+    "categories": {
+      "auth": {
+        "rikuganaidemo6c0a4207": {}
+      }
+    }
+  }
+}
