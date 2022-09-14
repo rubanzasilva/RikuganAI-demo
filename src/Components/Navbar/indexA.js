@@ -11,21 +11,8 @@ import 'antd/dist/antd.css';
 import { FaBars } from 'react-icons/fa'
 import { SidebarData } from '../SideBar/sideBarData'
 
-import { IconContext } from 'react-icons'
-import * as AiIcons from 'react-icons/ai';
-
-// import './index.css';
 import { Layout, Menu, Breadcrumb ,Upload, Button} from 'antd';
-import {
-  HomeOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-  DatabaseOutlined,
-  UploadOutlined ,
-} from '@ant-design/icons';
-import { Deploy } from 'grommet-icons';
-// import {NavLink, ItemContainer, ItemHeading, ItemName, UploadData, ItemTable, MenuContainer} from './menuElements'
+
 import { MenuContainer } from '../Menu/menuElements'
 import {
   Outlet,

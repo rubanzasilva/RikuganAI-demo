@@ -20,6 +20,7 @@ import {
 
 
 import Amplify from "aws-amplify";
+import NavBar from '../Navbar/indexA';
 //import useAmplifyAuth from './useAmplifyAuth';
 
 const DataMgt = () => {
@@ -29,6 +30,7 @@ const DataMgt = () => {
       const fileContent = e.target.files[0]
       /*const fileName = e.target.files[0].name*/
       const fileType = e.target.files[0].type
+      const info = e.target.files[0].status
 
       
       let ext = fileContent.name.split(".").pop().toLowerCase();
@@ -59,12 +61,19 @@ const DataMgt = () => {
       } catch (err) {
           console.log(err);
       }
+
+      if (info.file.status === 'done') {
+        message.success(`${info.file.name} file uploaded successfully`);
+      } else if (info.file.status === 'error') {
+        message.error(`${info.file.name} file upload failed.`);
+       }
   }
 
 
 
   return (
     <Container>
+    <NavBar/>
     <div>
     <h1> Upload CSV File to S3 </h1>
                         {loading ? <h3>Uploading...</h3> : 

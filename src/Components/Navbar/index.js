@@ -53,6 +53,7 @@ const Navbar = () => {
       <NavItem>
         <NavLink to="/"></NavLink>
       </NavItem>
+      
     </NavMenu>
    
     </Nav>

@@ -1,13 +1,13 @@
 import React from 'react'
 import NavBar from '../Components/Navbar/indexA'
 
-const Admin = () => {
+const DataSets = () => {
   return (
     <div>
     <NavBar/>
-    Admin
-    </div>
+    <h1>datasources</h1>
+    DataSources</div>
   )
 }
 
-export default Admin
+export default DataSets

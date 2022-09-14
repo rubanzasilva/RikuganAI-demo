@@ -1,8 +1,12 @@
 import React from 'react'
+import NavBar from '../Components/Navbar/indexA'
 
 const useCases = () => {
   return (
-    <div>useCases</div>
+    <div>
+    <NavBar/>
+    useCases
+    </div>
   )
 }
 

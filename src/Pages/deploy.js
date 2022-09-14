@@ -1,8 +1,12 @@
 import React from 'react'
+import NavBar from '../Components/Navbar/indexA'
 
 const deploy = () => {
   return (
-    <div>deploy</div>
+    <div>
+    <NavBar/>
+    deploy
+    </div>
   )
 }
 
