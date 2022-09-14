@@ -9,34 +9,24 @@ import {
   View,
   Card,
 } from "@aws-amplify/ui-react";
+import NavHome from '../Components/Nav';
+import HeroHome from '../Components/homePageHero';
+import Footer from '../Components/Footer';
 
-function Home({ signOut }) {
+function Home() {
   return (
     <View className="App">
+    <NavHome/>
+    <HeroHome/>
     
     <div>
-    <p>
-      This is the home page
-
-    </p>
-    
-    <br/>
-    <DataMgt/>
-    <p>
-      This is the home page
-
-    </p>
-
-    
     </div>
+    <Footer/>
+    
 
-      <Card>
-        <Heading level={1}>We now have Auth!</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
 }
 
 
-export default withAuthenticator(Home);
+export default Home;

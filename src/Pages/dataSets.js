@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../Components/Navbar/indexA'
 
-const DataSources = () => {
+const DataSets = () => {
   return (
     <div>
     <NavBar/>
@@ -10,4 +10,4 @@ const DataSources = () => {
   )
 }
 
-export default DataSources
+export default DataSets

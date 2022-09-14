@@ -5,45 +5,45 @@ import * as AiIcons from 'react-icons/ai';
 export const SidebarData = [
     {
         title:'Home',
-        path:'/',
+        path:'/homepage',
         icon: <AiIcons.AiFillHome/>,
-        cName:'nav-text'
+        cName:'home-page-link'
     },
     {
-        title:'DataSources',
-        path:'/DataSources',
+        title:'Datasets',
+        path:'/datasets',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'datasets-link'
     },
     {
         title:'Data Management',
-        path:'/DataManagement',
+        path:'/datamanagement',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'data-managment-link'
     },
     {
         title:'Visualization',
-        path:'/Visualization',
+        path:'/visualization',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'visualization-link'
     },
     {
         title:'Use Cases',
-        path:'/UseCases',
+        path:'/usecases',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'use-cases-link'
     },
     {
         title:'Admin',
-        path:'/Admin',
+        path:'/admin',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'admin-link'
     },
     {
-        title:'HomePage',
-        path:'/HomePage',
+        title:'Log out',
+        path:'/',
         icon: <FaBars/>,
-        cName:'nav-text'
+        cName:'log-out-link'
     }
 
 

@@ -1,14 +1,44 @@
 import React from 'react'
-import homePageDesign from '../Components/homePage'
+import DataMgt from '../Components/dataMgt/index'
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+import NavBar from '../Components/Navbar/indexA';
 
-const HomePage = () => {
+function HomePage({ signOut }) {
   return (
+    <View className="App">
+    <NavBar/>
+    
     <div>
-    <homePageDesign/>
-    home page pages
-    <h1>home page pages</h1>
+    <p>
+      This is the home page
+
+    </p>
+    
+    <br/>
+    <DataMgt/>
+    <p>
+      This is the home page
+
+    </p>
+
+    
     </div>
-  )
+
+      <Card>
+        <Heading level={1}>We now have Auth!</Heading>
+      </Card>
+      <Button onClick={signOut}>Sign Out</Button>
+    </View>
+  );
 }
 
-export default HomePage
+
+export default withAuthenticator(HomePage);
