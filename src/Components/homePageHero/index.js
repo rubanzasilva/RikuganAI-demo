@@ -10,7 +10,7 @@ import "antd/dist/antd.css";
 const { Title } = Typography;
 
 
-const HeroCategory = ({title,headline,buttonText,video}) => {
+const HeroHome = ({title,headline,buttonText,video}) => {
 
     return (
         <HeroContainer id="heroContainer">
@@ -44,4 +44,4 @@ const HeroCategory = ({title,headline,buttonText,video}) => {
     )
 }
 
-export default HeroCategory
+export default HeroHome

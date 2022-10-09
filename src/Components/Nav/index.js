@@ -14,7 +14,7 @@ const NavHome = ({toggle,img,alt}) => {
           <Nav>
               <NavBarContainer>
                   <NavLogo to='/'>
-                  RIKUGAN AI
+                  X2Y AI
                       {/* <Img src={logo} alt={alt}/> */}
                   </NavLogo>
 
