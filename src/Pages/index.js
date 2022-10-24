@@ -1,30 +1,32 @@
 import React from 'react'
 import DataMgt from '../Components/dataMgt/index'
 import "@aws-amplify/ui-react/styles.css";
-import {
-  withAuthenticator,
-  Button,
-  Heading,
-  Image,
-  View,
-  Card,
-} from "@aws-amplify/ui-react";
+// import {
+//   withAuthenticator,
+//   Button,
+//   Heading,
+//   Image,
+//   View,
+//   Card,
+// } from "@aws-amplify/ui-react";
 import NavHome from '../Components/Nav';
 import HeroHome from '../Components/homePageHero';
 import Footer from '../Components/Footer';
 
 function Home() {
   return (
-    <View className="App">
+    // <View className="App">
+    <div>
     <NavHome/>
     <HeroHome/>
     
     <div>
     </div>
     <Footer/>
+    </div>
     
 
-    </View>
+    // </View>
   );
 }
 
